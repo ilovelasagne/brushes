@@ -1,0 +1,27 @@
+{
+  "name": "brushes-editor",
+  "version": "1.0.0",
+  "description": "Professional Photo Editor",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.yourcompany.brusheseditor",
+    "productName": "Brushes Editor",
+    "win": {
+      "target": ["nsis"]
+    },
+    "linux": {
+      "target": ["deb", "pacman"],
+      "category": "Graphics"
+    }
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  }
+}
